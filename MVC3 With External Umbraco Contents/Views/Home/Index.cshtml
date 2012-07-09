@@ -1,5 +1,7 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = ViewBag.ExternalContent.Name;
 }
 
-<h2>Index</h2>
+<h2>ViewBag.ExternalContent.Name</h2>
+
+@Html.Raw(ViewBag.ExternalContent.BodyText)
