@@ -7,11 +7,13 @@ I'm sure there are other ways to solve this, but this is working Ok for me and I
 ##Two parts
 The solution consists of two parts
 
-1. The json content api on a standard Umbraco site. Simply a .cs to add to App_Code, which makes all content nodes available on a simple urls (/base/content/node/{id} and /base/content/nodeByUrl/?url=someurl
+1. The json content api on a standard Umbraco site. Simply content.cs https://github.com/joeriks/UmbracoExternalContents/blob/master/Umbraco-Site/App_Code/content.cs to add to App_Code, which makes all content nodes available on a simple urls (/base/content/node/{id} and /base/content/nodeByUrl/?url=someurl
 
 2. The MVC3 helper and abstract controller. Those takes care of getting the content from the Umbraco site and renders the content on the MVC3 site. They can handle tree structured content . So you can have an Umbraco structure with root and descendants and get the same structure ported to the MVC3 site.
 
 ##Simplest usage:
+
+See sample at https://github.com/joeriks/UmbracoExternalContents/tree/master/MVC3%20With%20External%20Umbraco%20Contents
 
 Setup a controller to get the data like this:
 
