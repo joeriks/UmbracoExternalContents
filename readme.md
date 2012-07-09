@@ -1,4 +1,4 @@
-##This is a work in progress / test approach to get editable content for a vanilla MVC 3 application.
+##This is a work in progress / test approach to use Umbraco as a content editor for a vanilla MVC 3 application.
 
 As I like the content editing in Umbraco very much I wanted to use that for my application. However I wanted the CMS to stay out of the way as much as possible, and in particular I wanted to handle routing and rendering myself - so I did not want a standard Umbraco installation on top of my application.
 
