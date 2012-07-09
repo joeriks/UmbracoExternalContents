@@ -23,7 +23,7 @@ Setup a controller to get the data like this:
 Use the data in your view like this:
 
     <h2>ViewBag.ExternalContent.Name</h2>
-    @Html.Raw(ViewBag.ExternalContent.BodyText)
+    @Html.Raw(ViewBag.ExternalContent.Properties.BodyText)
     
     
 Usage to keep tree structure:
