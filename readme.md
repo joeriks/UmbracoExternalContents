@@ -55,3 +55,18 @@ Sample view:
         <a href="@child.LocalUrl">@child.Name</a><br/>
     }
 
+Add route with "catch all":
+
+    public static void RegisterRoutes(RouteCollection routes)
+    {
+        routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+        //
+        // Routes external content pages from Umbraco
+        //
+        routes.MapRoute(
+            "Info", // Route name
+            "info/{*url}", // URL with parameters
+                new { controller = "Info", action = "Index" } // Parameter defaults
+            );
+            
