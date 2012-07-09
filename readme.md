@@ -1,6 +1,6 @@
 ##This is a work in progress / test approach to use Umbraco as a content editor for a plain MVC 3 application.
 
-Problem : having MVC 3 apps that needs nice content editing - but without all the fuzz of a full Umbraco CMS.
+Problem : having MVC 3 apps that needs nice content editing - but without all a full Umbraco CMS.
 
 Solution : use an Umbraco site externally and just retrieve the content from the MVC 3 app.
 
