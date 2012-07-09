@@ -25,7 +25,7 @@ public class ContentClass
             node.CreatorName,
             node.template,
             /*Template = template.Alias,*/
-            Properties = node.PropertiesAsList.Select(p => new { p.Alias, p.Value }).ToDictionary(k => k.Alias, k => k.Value),
+            Properties = node.PropertiesAsList.Select(p => new { p.Alias, Value=replacemedia(p.Value) }).ToDictionary(k => k.Alias, k => k.Value),
             node.CreateDate,
             node.UpdateDate,
             node.SortOrder,
@@ -49,4 +49,9 @@ public class ContentClass
         }
         return "";
     }
+
+private static string replacemedia(string html)
+{
+   return html.Replace("/media","http://mysite.com/media");    
+}
 }
