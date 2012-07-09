@@ -19,21 +19,21 @@ The solution consists of two simple parts
 
 (Sample at https://github.com/joeriks/UmbracoExternalContents/tree/master/MVC3%20With%20External%20Umbraco%20Contents)
 
-Get the data from within the controller like this:
+Get the data in your own code (controller or module or wherever) like this:
 
     // Get root node from mysite.com
-    _externalUmbracoContent = new UmbracoContent("http://UmbracoContentSite.com/", allowCache: useCache);
+    var externalUmbracoContent = new UmbracoContent("http://UmbracoContentSite.com/", allowCache: useCache);
 
     // Add node to ViewBag (for simplicity)
-    ViewBag.ExternalContent = _externalUmbracoContent.GetNode("/");
+    ViewBag.ExternalContentNode = externalUmbracoContent.GetNode("/");
     // Or
-    // ViewBag.ExternalContent = _externalUmbracoContent.GetNode(1100);
+    // ViewBag.ExternalContentNode = externalUmbracoContent.GetNode(1100);
     
 
 Use the data in your view like this:
 
-    <h2>ViewBag.ExternalContent.Name</h2>
-    @Html.Raw(ViewBag.ExternalContent.Properties.BodyText)
+    <h2>ViewBag.ExternalContentNode.Name</h2>
+    @Html.Raw(ViewBag.ExternalContentNode.Properties.BodyText)
     
     
 ###Usage to keep tree structure:
@@ -69,8 +69,6 @@ Add route with "catch all":
 
     public static void RegisterRoutes(RouteCollection routes)
     {
-        routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
         //
         // Routes external content pages from Umbraco
         //
