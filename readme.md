@@ -4,11 +4,12 @@ As I like the content editing in Umbraco very much I wanted to use that for my a
 
 I'm sure there are other ways to solve this, but this is working Ok for me and I wanted to publish it if someone else is interested, and also as a part of the discussion "how we like to see Umbraco in the future". I would like to have a setting "disable Umbraco front end routing and rendering" or something like that.
 
-##My solution consists of two parts
+##Two parts
+The solution consists of two parts
 
-1) the json content api on a standard Umbraco site. Simply a .cs to add to App_Code, which makes all content nodes available on a simple urls (/base/content/node/{id} and /base/content/nodeByUrl/?url=someurl
+1. The json content api on a standard Umbraco site. Simply a .cs to add to App_Code, which makes all content nodes available on a simple urls (/base/content/node/{id} and /base/content/nodeByUrl/?url=someurl
 
-2) the MVC3 helper and abstract controller. Those takes care of getting the content from the Umbraco site and renders the content on the MVC3 site. They can handle tree structured content . So you can have an Umbraco structure with root and descendants and get the same structure ported to the MVC3 site.
+2. The MVC3 helper and abstract controller. Those takes care of getting the content from the Umbraco site and renders the content on the MVC3 site. They can handle tree structured content . So you can have an Umbraco structure with root and descendants and get the same structure ported to the MVC3 site.
 
 ##Simplest usage:
 
