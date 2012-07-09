@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = Model.Name;
+}
+
+<p>All external content is in Model</p>
+
+<h2>@Model.Name</h2>
+
+<p>Sample text from property</p>
+
+@Html.Raw(Model.Properties.BodyText)
+
+<p>Sample links to children</p>
+@foreach(var child in Model.Children)
+{
+    <a href="@child.LocalUrl">@child.Name</a><br/>
+}
