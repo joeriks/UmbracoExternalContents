@@ -6,7 +6,7 @@ Solution : use an Umbraco site externally and just retrieve the content from the
 
 We like the content editing in Umbraco, and wanted to use that for an existing MVC 3 application. However we wanted the CMS to stay out of the way as much as possible, and in particular we wanted to handle routing and rendering completely ourselves (or rather the plain MVC3 way) - so the standard Umbraco installation was not something we wanted to have.
 
-I know there are other ways to solve this, but this seems to work OK (still early though) and I wanted to publish it if someone else is interested. And perhaps also as a part of the discussion "how we like to see Umbraco in the future".
+I know there are other ways to solve this, but this is simple and does seems to work ok (still early though) and I wanted to publish it if someone else is interested + also as part of the disussion of how we would like to see Umbraco in the future (I'd vote for an option to be able to disable Umbraco front-end routing and rendering).
 
 ##Two parts
 The solution consists of two simple parts
